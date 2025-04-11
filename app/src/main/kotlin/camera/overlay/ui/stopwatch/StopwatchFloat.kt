@@ -1,4 +1,4 @@
-package io.github.luiisca.ui.stopwatch
+package camera.overlay.ui.stopwatch
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

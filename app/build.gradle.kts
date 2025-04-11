@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sample.app"
+    namespace = "camera.overlay"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.sample.app"
+        applicationId = "camera.overlay"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
@@ -42,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -52,15 +52,14 @@ android {
 }
 
 dependencies {
-    androidTestImplementation(libs.androidx.junit.ktx)
-
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.leakcanary.android)
+//    implementation("io.github.luiisca.floating.views:1.0.5")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.dynamic.animation)
+    implementation(libs.androidx.saved.state)
+    implementation(libs.androidx.compose.foundation)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.runtime.livedata)
@@ -69,13 +68,11 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.dynamic.animation)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.saved.state)
-
-    testImplementation(libs.androidx.junit.ktx)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    debugImplementation(libs.androidx.compose.ui.tooling)
 }

@@ -55,7 +55,6 @@ class FloatLifecycleOwner :
     init {
         coroutineContext = AndroidUiDispatcher.CurrentThread
     }
-
     // LifecycleOwner methods
     fun onCreate() {
         savedStateRegistryController.performRestore(null)
@@ -70,12 +69,20 @@ class FloatLifecycleOwner :
             recomposer!!.runRecomposeAndApplyChanges()
         }
     }
-
     fun onStart() {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
     }
-
     fun onResume() {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    }
+    fun onPause() {
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    }
+    fun onStop() {
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
+
+    }
+    fun onDestroy() {
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     }
 }

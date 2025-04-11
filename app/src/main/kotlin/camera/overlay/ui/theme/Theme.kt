@@ -1,4 +1,4 @@
-package io.github.luiisca.ui.theme
+package camera.overlay.ui.theme
 
 import android.app.Activity
 import android.os.Build
