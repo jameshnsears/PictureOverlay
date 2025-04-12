@@ -1,21 +1,23 @@
 [versions]
+versionCode = "1"
 compileSdk = "35"
 minSdk = "24"
 targetSdk = "35"
 agp = "8.9.1"
 kotlin = "2.0.21"
 lifecycle = "2.8.7"
-compose-bom = "2025.03.01"
+compose-bom = "2025.04.00"
 compose-foundation = "1.7.8"
-dynamic-animation = "1.0.0"
+dynamic-animation = "1.1.0"
 activity-compose = "1.10.1"
-core-ktx = "1.15.0"
+core-ktx = "1.16.0"
 navigation-compose = "2.8.9"
 saved-state = "1.2.1"
 mockk = "1.13.17"
 timber = "5.0.1"
 junit = "1.2.1"
 leakcanary-android = "2.14"
+kotlin-test = "2.1.20"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -42,6 +44,7 @@ mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 androidx-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "junit" }
 leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary-android" }
+org-jetbrains-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin-test" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
