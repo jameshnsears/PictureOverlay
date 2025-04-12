@@ -20,7 +20,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class FloatLifecycleOwner :
+class OverlayViewStorage :
     LifecycleOwner, ViewModelStoreOwner, SavedStateRegistryOwner {
 
     private val lifecycleRegistry: LifecycleRegistry = LifecycleRegistry(this)
@@ -34,15 +34,13 @@ class FloatLifecycleOwner :
         savedStateRegistryController.savedStateRegistry
 
     private var _view: View? = null
+    
     private var recomposer: Recomposer? = null
+
     private var runRecomposeScope: CoroutineScope? = null
+
     private var coroutineContext: CoroutineContext? = null
 
-    /**
-    Compose uses the Window's decor view to locate the
-    Lifecycle/ViewModel/SavedStateRegistry owners.
-    Therefore, we need to set this class as the "owner" for the decor view.
-     */
     fun attachToDecorView(decorView: View?) {
         if (decorView == null) return
         this._view = decorView
@@ -56,7 +54,6 @@ class FloatLifecycleOwner :
         coroutineContext = AndroidUiDispatcher.CurrentThread
     }
 
-    // LifecycleOwner methods
     fun onCreate() {
         savedStateRegistryController.performRestore(null)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
