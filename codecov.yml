@@ -1,0 +1,6 @@
+flags:
+  app.test.fdroid:
+    carryforward: false
+
+  app.androidTest.fdroid:
+    carryforward: false

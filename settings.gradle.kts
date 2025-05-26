@@ -21,4 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Picture Overlay"
 include(":app")
- 
+include(":opencv")
+project(":opencv").projectDir = File(rootDir, "module/opencv/")
+include(":common")
+project(":common").projectDir = File(rootDir, "module/common/")
+include(":permissions")
+project(":permissions").projectDir = File(rootDir, "module/permissions/")
