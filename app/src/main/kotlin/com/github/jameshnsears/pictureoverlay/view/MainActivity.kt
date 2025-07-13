@@ -39,6 +39,7 @@ class MainActivity : ComponentActivity() {
                 composable(CommonNavigation.SCREEN_SELECT_PHOTO) {
                     PhotoSelectScreen(navController)
                 }
+
                 // https://code.luasoftware.com/tutorials/android/jetpack-compose-navigation-pass-arguments/
 //                composable(
 //                    Navigation.SCREEN_CONFIGURE_OVERLAY + "/{photoId}",
