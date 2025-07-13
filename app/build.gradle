@@ -3,8 +3,8 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'kotlin-android'
-    id "io.gitlab.arturbosch.detekt" version "1.23.0"
-    id "org.jlleitschuh.gradle.ktlint" version "11.6.1"
+    id "io.gitlab.arturbosch.detekt" version "1.23.8"
+    id "org.jlleitschuh.gradle.ktlint" version "13.0.0"
     id 'com.diffplug.spotless'
     id 'org.jetbrains.kotlin.android'
     alias(libs.plugins.compose.compiler)
@@ -34,20 +34,17 @@ if (!localPropertiesFile.exists()) {
 localProperties.load(new FileInputStream(localPropertiesFile))
 
 android {
-    namespace "com.github.jameshnsears.cameraoverlay"
-    compileSdk 35
-
+    namespace "com.github.jameshnsears.pictureoverlay"
+    compileSdk 36
 
     defaultConfig {
-        minSdk 24
-        targetSdk 34
+        minSdk 26
+        targetSdk 36
 
-        applicationId "com.github.jameshnsears.cameraoverlay"
+        applicationId "com.github.jameshnsears.pictureoverlay"
 
-        // changelog version | min sdk | target sdk
-        versionCode 12433
-        // semantic versioning
-        versionName "1.0.0"
+        versionCode = 1
+        versionName = "${versionCode}${minSdk}${targetSdk}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments = [
@@ -97,12 +94,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = '17'
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
     buildFeatures {
@@ -157,6 +150,12 @@ android {
         htmlReport true
         warningsAsErrors true
         xmlReport true
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
     }
 }
 

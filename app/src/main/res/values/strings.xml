@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Camera Overlay</string>
+    <string name="app_name">Picture Overlay</string>
 
     <string name="about_dialog">About</string>
     <string name="about_dialog_privacy_policy">Privacy Policy</string>

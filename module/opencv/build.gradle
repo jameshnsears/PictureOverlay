@@ -8,12 +8,12 @@ println "OpenCV: " + openCVersionName
 
 android {
     namespace 'org.opencv'
-    compileSdk 35
+    compileSdk 36
 
 
     defaultConfig {
-        minSdk 24
-        targetSdk 34
+        minSdk 26
+        targetSdk 36
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -33,8 +33,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
     sourceSets {
@@ -52,5 +52,5 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation libs.androidx.core.ktx
 }

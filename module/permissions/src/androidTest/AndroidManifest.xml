@@ -11,7 +11,7 @@
     <application
         android:label="MainActivityTestHarness">
         <activity
-            android:name="com.github.jameshnsears.cameraoverlay.view.MainActivityTestHarness"
+            android:name="com.github.jameshnsears.pictureoverlay.view.MainActivityTestHarness"
             android:exported="true">
         </activity>
     </application>
