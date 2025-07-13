@@ -34,7 +34,7 @@ class OverlayViewStorage :
         savedStateRegistryController.savedStateRegistry
 
     private var _view: View? = null
-    
+
     private var recomposer: Recomposer? = null
 
     private var runRecomposeScope: CoroutineScope? = null

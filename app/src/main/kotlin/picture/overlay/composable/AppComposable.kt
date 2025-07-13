@@ -21,11 +21,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.luiisca.floating.views.data.CloseOverlayData
-import io.github.luiisca.floating.views.event.ExpandedOverlayEventInterface
 import io.github.luiisca.floating.views.data.OverlayConfigData
 import io.github.luiisca.floating.views.event.ActiveOverlayEventInterface
-import io.github.luiisca.floating.views.service.OverlayServiceState
+import io.github.luiisca.floating.views.event.ExpandedOverlayEventInterface
 import io.github.luiisca.floating.views.helpers.OverlayHelper
+import io.github.luiisca.floating.views.service.OverlayServiceState
 import picture.overlay.composable.stopwatch.StopwatchCloseComposable
 import picture.overlay.composable.stopwatch.StopwatchComposable
 
@@ -57,7 +57,7 @@ fun App() {
                         // TODO JS - Expanded is what happens when you click on the stopwatch
                         expanded = ExpandedOverlayEventInterface(
                             enabled = false,
-                        )
+                        ),
                         /*
                         val expandedFloatConfig = ExpandedFloatConfig(
                             enabled = true,
@@ -65,7 +65,7 @@ fun App() {
                             dimAmount = 0.5f,
                             composable = { close -> /* Expanded content */ }
                         )
-                         */,
+                         */
 
                         close = CloseOverlayData(
                             composable = { StopwatchCloseComposable() },
@@ -79,7 +79,7 @@ fun App() {
                         )
                          */
 
-                        )
+                    )
 
                     // Launch a new stopwatch floating view
                     OverlayHelper.startFloatServiceIfPermitted(context, config)

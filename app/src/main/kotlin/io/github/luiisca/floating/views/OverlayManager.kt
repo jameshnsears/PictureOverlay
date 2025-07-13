@@ -9,8 +9,8 @@ import android.view.View
 import android.view.WindowManager
 import androidx.core.app.ServiceCompat
 import io.github.luiisca.floating.views.data.OverlayConfigData
-import io.github.luiisca.floating.views.helpers.OverlayHelper
 import io.github.luiisca.floating.views.helpers.NotificationHelper
+import io.github.luiisca.floating.views.helpers.OverlayHelper
 
 enum class CloseBehavior {
     MAIN_SNAPS_TO_CLOSE_FLOAT,

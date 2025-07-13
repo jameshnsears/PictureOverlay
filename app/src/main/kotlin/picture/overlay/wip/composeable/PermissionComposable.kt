@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.core.net.toUri
+import androidx.lifecycle.viewmodel.compose.viewModel
 import io.github.luiisca.floating.views.data.CloseOverlayData
 import io.github.luiisca.floating.views.data.OverlayConfigData
 import io.github.luiisca.floating.views.event.ActiveOverlayEventInterface
@@ -63,16 +63,16 @@ fun OverlayPermissionScreen(
 
         Button(
             onClick = {
-            if (!Settings.canDrawOverlays(context)) {
-                val intent = Intent(
-                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    "package:${context.packageName}".toUri()
-                )
-                launcher.launch(intent)
-            } else {
-                viewModel.checkOverlayPermission(context)
-            }
-        },
+                if (!Settings.canDrawOverlays(context)) {
+                    val intent = Intent(
+                        Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        "package:${context.packageName}".toUri()
+                    )
+                    launcher.launch(intent)
+                } else {
+                    viewModel.checkOverlayPermission(context)
+                }
+            },
             enabled = !permissionGranted
         ) {
             Text("Request Overlay Permission...")
@@ -97,7 +97,7 @@ fun OverlayPermissionScreen(
                         // TODO JS - Expanded is what happens when you click on the stopwatch
                         expanded = ExpandedOverlayEventInterface(
                             enabled = false,
-                        )
+                        ),
                         /*
                         val expandedFloatConfig = ExpandedFloatConfig(
                             enabled = true,
@@ -105,7 +105,7 @@ fun OverlayPermissionScreen(
                             dimAmount = 0.5f,
                             composable = { close -> /* Expanded content */ }
                         )
-                         */,
+                         */
 
                         close = CloseOverlayData(
                             composable = { StopwatchCloseComposable() },
