@@ -1,54 +1,52 @@
 [versions]
+activity-compose = "1.10.1"
+agp = "8.11.1"
+compileSdk = "36"
+compose-bom = "2025.06.01"
+compose-foundation = "1.8.3"
+core-ktx = "1.16.0"
+dynamic-animation = "1.1.0"
+junit = "1.2.1"
+kotlin = "2.2.0"
+kotlin-test = "2.2.0"
+leakcanary-android = "2.14"
+lifecycle = "2.9.1"
+minSdk = "30"
+mockk = "1.14.4"
+navigation-compose = "2.9.1"
+saved-state = "1.3.0"
+targetSdk = "36"
+timber = "5.0.1"
 versionCode = "1"
 
-compileSdk = "35"
-minSdk = "30"
-targetSdk = "35"
-
-agp = "8.10.0"
-kotlin = "2.0.21"
-lifecycle = "2.9.0"
-compose-bom = "2025.05.00"
-compose-foundation = "1.8.1"
-dynamic-animation = "1.1.0"
-activity-compose = "1.10.1"
-core-ktx = "1.16.0"
-navigation-compose = "2.9.0"
-saved-state = "1.3.0"
-mockk = "1.14.2"
-timber = "5.0.1"
-junit = "1.2.1"
-leakcanary-android = "2.14"
-kotlin-test = "2.1.21"
-
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "compose-foundation" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-material-iconsExtended = { module = "androidx.compose.material:material-icons-extended" }
 androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
-androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version = "1.8.1" }
-androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version = "1.8.3" }
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version = "1.8.3" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 androidx-dynamic-animation = { group = "androidx.dynamicanimation", name = "dynamicanimation", version.ref = "dynamic-animation" }
+androidx-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "junit" }
 androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel-savedstate = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
-androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version = "1.8.1" }
-androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-saved-state = { group = "androidx.savedstate", name = "savedstate", version.ref = "saved-state" }
-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
-androidx-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "junit" }
 leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary-android" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 org-jetbrains-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin-test" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
